@@ -10,7 +10,6 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import ru.jdev.qd.QdWidgetProvider;
 import ru.jdev.qd.R;
-import ru.jdev.qd.Utils;
 import ru.jdev.qd.model.ContactInfo;
 import ru.jdev.qd.model.Page;
 import ru.jdev.qd.model.Pager;
@@ -60,8 +59,6 @@ public class UpdateWidgetsTask implements Runnable {
         Log.v(TAG, "update widget: " + appWidgetId);
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_main);
 
-        final int currentPage = context.getSharedPreferences(QdWidgetProvider.PREFS_FILE_NAME, Context.MODE_PRIVATE).getInt(Utils.getWidgetPageProperty(appWidgetId), 0);
-        Log.v(TAG, "Current page: " + String.valueOf(currentPage));
         final Page page = pager.getPage();
         Log.v(TAG, "Page: " + page);
         setRow(views, page.lastCalled, lastCalledLabelIds, appWidgetId, 0);

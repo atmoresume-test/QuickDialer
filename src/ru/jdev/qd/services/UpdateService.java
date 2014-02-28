@@ -7,14 +7,11 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.util.Log;
-import ru.jdev.qd.Utils;
 import ru.jdev.qd.model.ContactInfoDao;
 import ru.jdev.qd.model.Pager;
 import ru.jdev.qd.tasks.StopServiceTask;
 import ru.jdev.qd.tasks.UpdatePagerTask;
 import ru.jdev.qd.tasks.UpdateWidgetsTask;
-
-import java.util.concurrent.TimeUnit;
 
 public class UpdateService extends Service {
 

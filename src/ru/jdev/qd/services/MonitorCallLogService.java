@@ -9,7 +9,6 @@ import android.os.IBinder;
 import android.provider.CallLog;
 import ru.jdev.qd.tasks.StopServiceTask;
 
-import java.util.concurrent.TimeUnit;
 public class MonitorCallLogService extends Service {
 
     private final HandlerThread handlerThread = new HandlerThread("Model an UI updating thread");
